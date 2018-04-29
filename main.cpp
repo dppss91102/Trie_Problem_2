@@ -72,9 +72,7 @@ public:
                 if (currentNode == 0) {
                     pos.push_back(cursor);
                     temp = cursor + 1;//將下一個字元的位置暫存起來
-                    matching = true;
-                    matchText(p, cursor + 1, it.first);
-                    return;
+                    matching = true;//開始matching
                 }
                 matchText(p, cursor + 1, it.first);
                 return;
@@ -107,9 +105,7 @@ private:
     bool matching;//是否正在matching
 };
 
-
 int main() {
-
     char text[maxCharNum];
     cin.getline(text, maxCharNum);
     int n;
@@ -131,8 +127,3 @@ int main() {
 
     return 0;
 }
-
-
-
-
-
